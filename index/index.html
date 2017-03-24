@@ -7,8 +7,8 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   <script>
-  // czysci na początku 
-  function clearFunction() {
+  // czysci na początku
+  function wyczyscFunction() {
     ctx.fillStyle="#FFFFFF";
     ctx.clearRect(0, 0, c.width, c.height);
     drawLines();
@@ -53,7 +53,7 @@
     <input type="text" id="b" size="1">x +
     <input type="text" id="c" size="1">
     <button onclick="drawFunction()">Rysuj</button>
-    <button onclick="clearFunction()">Wyczyść</button>
+    <button onclick="wyczyscFunction()">Wyczyść</button>
   </div>
   <script>
   var c = document.getElementById('myCanvas');
