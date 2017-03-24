@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" >
+  <title>Sprawdzian</title>
+
+</head>
+<body>
+  <div>
+  <table>
+    <tr><td><button onclick="upFunction()">^</button></td></tr>
+    <tr><td><button onclick="downFunction()">v</button></td></tr>
+    <tr><td><button onclick="rightFunction()">></button></td></tr>
+    <tr><td><button onclick="leftFunction()"><</button></td></tr>
+    <tr><td><button onclick="changeFunction()">Zmien</button></td></tr>
+  </div>
+  </table>
+  <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;">
+  </canvas>
+  <div>
+  x= <input type="text" id="x" value="500" size="1">
+  y= <input type="text" id="y" value="250" size="1">
+  Zmien <input type="text" id="zmien" value="opuszczony" size="7">
+</div>
+  <script>
+  function upFunction(){
+    var y=parseInt(document.getElementById('y').value);
+    y = y-1;
+    document.getElementById('y').value = y;
+    var x=parseInt(document.getElementById('x').value);
+    if(document.getElementById('zmien').value=='opuszczony'){
+    ctx.lineTo(x,y);
+    ctx.stroke();
+  }else {
+      ctx.moveTo(x,y);
+    }
+  }
+  function downFunction(){
+    var y=parseInt(document.getElementById('y').value);
+    y = y+1;
+    document.getElementById('y').value = y;
+    var x=parseInt(document.getElementById('x').value);
+    if(document.getElementById('zmien').value=='opuszczony'){
+    ctx.lineTo(x,y);
+    ctx.stroke();
+  }else {
+      ctx.moveTo(x,y);
+    }
+  }
+  function rightFunction(){
+    var x=parseInt(document.getElementById('x').value);
+    x = x+1;
+    document.getElementById('x').value = x;
+    var y=parseInt(document.getElementById('y').value);
+    if(document.getElementById('zmien').value=='opuszczony'){
+    ctx.lineTo(x,y);
+    ctx.stroke();
+  }else {
+      ctx.moveTo(x,y);
+    }
+  }
+  function leftFunction(){
+    var x=parseInt(document.getElementById('x').value);
+    x = x-1;
+    document.getElementById('x').value = x;
+    var y=parseInt(document.getElementById('y').value);
+    if(document.getElementById('zmien').value=='opuszczony'){
+    ctx.lineTo(x,y);
+    ctx.stroke();
+  }else{
+      ctx.moveTo(x,y);
+    }
+  }
+  function changeFunction(){
+    var zmien=document.getElementById('zmien').value;
+    if(zmien == 'opuszczony'){
+      document.getElementById('zmien').value='podniesiony';
+    }else{
+      document.getElementById('zmien').value='opuszczony';
+    }
+  }
+  </script>
+  <script>
+  var c = document.getElementById('myCanvas');
+  var ctx = c.getContext("2d");
+  ctx.moveTo(500,250);
+
+  </script>
+</body>
+</html>

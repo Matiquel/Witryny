@@ -1,0 +1,53 @@
+body
+{
+  background-color: lightgray;
+}
+.header
+{
+  background-color: #666600;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+.pierwszy
+{
+  background-color: white;
+  height: 150px;
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+.drugi
+{
+  background-color: white;
+  height: auto;
+  margin:auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+.trzeci
+{
+  background-color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+.zbysiu
+{
+  width: 100%;
+}
+.guziki
+{
+  width: 300px;
+  margin-top: 20px;
+  margin:0 auto;
+}
+.witam
+{
+  background-color: lightgreen;
+}

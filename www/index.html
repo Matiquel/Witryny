@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+<title>Strona</title>
+<link rel="stylesheet" type="text/css" href="theme.css">
+<style>
+table, th, td
+{
+    border: 1px solid black;
+}
+</style>
+</head>
+<body style="font-size: 1rm;">
+  <div class="header">
+    <div class="guziki">
+      <button type="button" name="button" onClick=powiekszTekst() class="witam">A+</button>
+      <button type="button" name="button" onClick=zmniejszTekst() class="witam">A-</button>
+      <button type="button" name="button" onClick=zmienKolor() class="witam">Zmiana Koloru</button>
+  </div>
+  <div class="pierwszy">
+    <div>
+      <p class="tekst">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+    </div>
+  </div>
+  <div class="drugi">
+    <img src="photo.jpg" alt="Mountain View" class="zbysiu" style="width:304px;height:228px;">
+  </div>
+  <div class="trzeci">
+    <table style="width:100%" class="tekst">
+  <tr>
+    <th>Imię</th>
+    <th>Nazwisko</th>
+    <th>Wiek</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+  </div>
+<script>
+  function powiekszTekst(){
+    //var lista=document.getElementsByClassName('tekst');
+    var lista=$(".tekst");
+    for(var i=0; i < lista.length; i++){
+      if(lista[i].style.fontSize == ""){
+        lista[i].style.fontSize="1em";
+      }
+    var rozmiar=parseFloat(lista[i].style.fontSize);
+      rozmiar += 0.2;
+      lista[i].style.fontSize=rozmiar+"em";
+    }
+  }
+  function zmniejszTekst(){
+    //var lista=document.getElementsByClassName('tekst');
+    var lista=$(".tekst");
+    for(var i=0; i < lista.length; i++){
+      if(lista[i].style.fontSize == ""){
+        lista[i].style.fontSize="1em";
+      }
+    var rozmiar=parseFloat(lista[i].style.fontSize);
+      rozmiar -= 0.2;
+      lista[i].style.fontSize=rozmiar+"em";
+    }
+  }
+  function zmienKolor(){
+    document.body.style.backgroundColor = "black";
+
+    //var lista = document.getElementsByClassName('tekst');
+    var lista=$(".tekst")
+    for(var i=0; i < lista.length; i++){
+
+    lista[i].style.color = "yellow";
+  }
+    var divs = document.getElementsByTagName('div');
+    for(var i=0; i < divs.length; i++){
+      divs[i].style.backgroundColor = "#1a000d"
+    }
+  }
+</script>
+</body>
+</html>
