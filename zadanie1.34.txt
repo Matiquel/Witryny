@@ -1,0 +1,153 @@
+a)
+#include <iostream>
+
+using namespace std;
+int oblicz(int n)
+{
+    if (n==1) return 4;
+    return oblicz(n-1)+3;
+}
+int main()
+{
+    int n;
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    cout << oblicz(n);
+    return 0;
+}
+// (4,7,10,13,16,19,22,25,28...)
+
+
+b)
+#include <iostream>
+
+using namespace std;
+int oblicz(int n)
+{
+    if (n==1) return 2;
+    return oblicz(n-1)*2;
+}
+
+int main()
+{
+    int n;
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    cout << oblicz(n);
+    return 0;
+}
+// (2,4,8,16,32,64,128,256,512...)
+
+
+c)
+#include <iostream>
+
+using namespace std;
+int n;
+double a;
+int r=-3;
+int main()
+{
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    for(int i=1; i<=n; i++){
+    if(i==1){
+        a=0.2;
+        }
+        else{
+        a=a*r;
+        }
+    }
+    cout << a;
+    return 0;
+}
+// (0,2 , -0,6 , 1,8 , -5,4 , 16,2 , -48,6 , 145,8...)
+
+d)
+#include <iostream>
+
+using namespace std;
+int n;
+double a;
+int r=-2;
+int main()
+{
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    for(int i=1; i<=n; i++){
+    if(i==1){
+        a=-10;
+        }
+        else{
+        a=a/r;
+        }
+    }
+    cout << a;
+    return 0;
+}
+// (-10;5;-2,5;1,25;-0,625;0,3125...)
+
+e)
+#include <iostream>
+
+using namespace std;
+
+int oblicz(int n){
+    return (n / 2) + 3 + (2 * (n % 2));
+}
+int main()
+{
+    int n;
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    cout << oblicz(n);
+    return 0;                                   // Program zaczyna wyswietlanie od wartosci 0, ktore jest rowne 3 itd.
+
+}
+//(3,5,4,6,5,7,6,8,7...)
+
+f)
+#include <iostream>
+
+using namespace std;
+
+double oblicz(int n){
+    return (n / 0.5) + 1.5 + (2 * (n % 2));
+}
+int main()
+{
+    int n;
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    cout << oblicz(n);
+    return 0;                                   
+
+}
+//(1,5 ; 1 ; 0,5 ; -0,5 ; -2 ; -4,5 ; -8,5 ; -15 ...)
+
+
+j)
+#include <iostream>
+
+using namespace std;
+int oblicz(int n)
+{
+   int a=0;
+   if(n>1)
+      return oblicz(n-1)+((n+1)%2);
+   else
+      return a;
+}
+int main()
+{
+    int n;
+    cout << "Ktora liczbe ciagu mam wyswietlic: ";
+    cin >> n;
+    if(n%2)
+    cout << -oblicz(n);
+    else
+    cout<< oblicz(n);
+    return 0;
+
+}
+//(0,1,-1,2,-2,3,-3,4,-4…)
